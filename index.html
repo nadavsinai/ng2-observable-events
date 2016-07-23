@@ -13,7 +13,9 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function(err){ console.error(err); });
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
     </script>
     <title>Ng2-observable-events</title>
 </head>
@@ -21,6 +23,7 @@
 <body>
 
 <!-- HEADER -->
+<my-app>Loading...</my-app>
 <div id="header_wrap" class="outer">
     <header class="inner">
         <a id="forkme_banner" href="https://github.com/nadavsinai/ng2-observable-events">View on GitHub</a>
@@ -39,7 +42,9 @@
 
 <!-- MAIN CONTENT -->
 <div id="main_content_wrap" class="outer">
+
     <section id="main_content" class="inner">
+
         <h1>
             <a id="observable-events-directive" class="anchor" href="#observable-events-directive" aria-hidden="true"><span aria-hidden="true"
                                                                                                                             class="octicon octicon-link"></span></a>Observable
@@ -76,10 +81,10 @@
                 component's class, remember it is only available after ngAfterViewInit hook has been called.
             </li>
         </ul>
-
-        <my-app></my-app>
     </section>
+
 </div>
+
 
 <!-- FOOTER  -->
 <div id="footer_wrap" class="outer">

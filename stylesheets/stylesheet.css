@@ -424,6 +424,11 @@ Small Device Styles
 
 }
 my-app {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
+  position: relative;
   display: block;
+  background: white;
+}
+.container{
+  background: white;
 }
