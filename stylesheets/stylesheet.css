@@ -423,3 +423,7 @@ Small Device Styles
   }
 
 }
+my-app {
+  margin-bottom: 200px;
+  display: block;
+}
