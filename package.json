@@ -19,7 +19,7 @@
     "rxjs"
   ],
   "author": "Nadav Sinai",
-  "main": "./src/lib/observable.events.directive.js",
+  "main": "./dist/observable.events.directive.js",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
