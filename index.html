@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ng2-observable-events : A little helper to get observable of any dom event on any node in component">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ng2-observable-events</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nadavsinai/ng2-observable-events">View on GitHub</a>
+
+          <h1 id="project_title">Ng2-observable-events</h1>
+          <h2 id="project_tagline">A little helper to get observable of any dom event on any node in component</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/nadavsinai/ng2-observable-events/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/nadavsinai/ng2-observable-events/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="observable-events-directive" class="anchor" href="#observable-events-directive" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Observable Events Directive</h1>
+
+<p>Angular 2 pushes the developer towards observable "stream" programming. 
+This is modeled very nicely for state changes using inputs and the async pipe.
+However getting dom events observables is a bit cumbersome if done right,I made this little helper to make it a little easier.</p>
+
+<p>It is easy to use <a href="http://reactivex.io/rxjs/class/es6/Observable.js%7EObservable.html#static-method-fromEvent">Rx.Observable.fromEvent</a> constructor somewhere in your component code, 
+however this will be against angular 2 paradigm of not accessing the DOM directly as for the first paramter you will need reference to a native DOM element.</p>
+
+<p>My code uses <a href="http://reactivex.io/rxjs/class/es6/Observable.js%7EObservable.html#static-method-fromEventPattern">Rx.Observable.fromEventPattern</a>, utilizing the renderer .listen method
+ which goes though all the abstraction needed for both the webWorker and server use cases as well as the obvious browser use case.</p>
+
+<h2>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use</h2>
+
+<ul>
+<li>Add the exported ObservableEvents directive class to your directives array in your component or below it.</li>
+<li>use the ObsEvents='' attribute selector on the dom element you would like to monitor, the value should be the event type (without the "on") eg : ObsEvents="click"</li>
+<li>If you need more than one event observable you can separate multiple event names with a comma eg : ObsEvents="mousemove,mouseup,mousedown" </li>
+<li>add a local template variable to the DOM node - #myObs='$' , the part that's set here is the $ in the value's place, myObs is just an example</li>
+<li>use <a href="https://github.com/ViewChild" class="user-mention">@ViewChild</a>('myObs') to recieve the exported observable to your component's class, remember it is only available after ngAfterViewInit hook has been called.</li>
+</ul>
+
+<p>example code in src folder</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ng2-observable-events maintained by <a href="https://github.com/nadavsinai">nadavsinai</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
