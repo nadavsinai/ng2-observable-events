@@ -18,6 +18,7 @@
     "directive",
     "rxjs"
   ],
+  "typings": "./dist/observable.events.directive.d.ts",
   "author": "Nadav Sinai",
   "main": "./dist/observable.events.directive.js",
   "license": "ISC",
