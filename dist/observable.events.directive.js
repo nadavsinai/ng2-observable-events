@@ -44,4 +44,3 @@ var ObservableEvents = (function () {
     return ObservableEvents;
 }());
 exports.ObservableEvents = ObservableEvents;
-//# sourceMappingURL=observable.events.directive.js.map

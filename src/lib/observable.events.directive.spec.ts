@@ -31,7 +31,7 @@ describe('ObservableEvent Directive', function () {
         }
       });
     })));
-  // it('should be possible to subscibe and unsubscribe clickHandler, which will remove the actula event listener',
+  // it('should be possible to subscibe and unsubscribe clickHandler, which will remove the actual event listener',
   //todo
 // })
 // ))
