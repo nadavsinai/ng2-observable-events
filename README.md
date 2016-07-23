@@ -18,7 +18,7 @@ My code uses [Rx.Observable.fromEventPattern](http://reactivex.io/rxjs/class/es6
 - If you need more than one event observable you can separate multiple event names with a comma eg : ObsEvents="mousemove,mouseup,mousedown" 
 - add a local template variable to the DOM node - #myObs='$' , the part that's set here is the $ in the value's place, myObs is just an example
 - use @ViewChild('myObs') to recieve the exported observable to your component's class, remember it is only available after ngAfterViewInit hook has been called.
-
+- If You have asked for more than one observable, the resulting export would be of a hash with the event name as the key and the observable as value, else the export is the observable itself 
 example code in src folder
 
 
